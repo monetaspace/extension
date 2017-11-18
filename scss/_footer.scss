@@ -1,0 +1,11 @@
+footer {
+	padding-bottom: .5rem;
+	width: $moneta-default-width;
+	display: flex;
+
+	span {
+		text-align: center;
+		width: $moneta-default-width/3;
+		font-size: 0.7rem;
+	}
+}

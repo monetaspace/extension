@@ -1,0 +1,15 @@
+body {
+	width: $moneta-default-width;
+}
+.item-name {
+	font-size: 1.3rem;
+	text-align: center;
+	display: block;
+}
+.links {
+	cursor: pointer;
+}
+.links:hover {
+	text-decoration: underline;
+}
+button:focus { outline: none; }

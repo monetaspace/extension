@@ -1,0 +1,73 @@
+#cash {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		margin-top: .5rem;
+		display: flex;
+
+		li {
+			line-height: 2rem;
+			margin: 0px 5px;
+			color: DeepSkyBlue;
+		}
+		.refresh {
+			cursor: pointer;
+		}
+		.amount {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+		.currency {
+			font-size: 1rem;
+		}
+	}
+
+	ul.rub {
+		li {
+			color: LimeGreen;
+		}
+		li:first-child::before {
+			content: '~ ';
+		}
+
+		.amount {
+			font-size: 1rem;
+			font-weight: bold;
+		}
+	}
+
+	.buttons {
+		margin: $moneta-header-height/4 0;
+
+		button#el-withdraw {
+			width: 100%;
+			border: 0;
+			background: MediumTurquoise;
+
+			font-size: 1.1rem;
+			cursor: pointer;
+			color: #fff;
+			padding: 0.5rem 0;
+
+			&:hover {
+				background: Turquoise;
+			}
+		}
+
+		button#el-stop {
+			width: 100%;
+			border: 0;
+			background: #fff;
+			color: MediumTurquoise;
+
+			font-size: 1.1rem;
+			cursor: pointer;
+			padding: 0.5rem 0;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

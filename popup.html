@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Moneta Space</title>
+	<link rel="stylesheet" href="stylesheets/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+	<header>
+		<div class="logotype">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310"><defs><style>.cls-1,.cls-2,.cls-3{fill:none;}.cls-1{stroke:#000;stroke-miterlimit:10;}.cls-2{stroke:#f5f5f5;}.cls-2,.cls-3{stroke-width:10px;}.cls-3{stroke:#90ee90;}</style></defs><title>logotype_1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_4" data-name="Layer 4"><g id="Линии"><line class="cls-1" x1="155" y1="305" x2="155" y2="5"/><line class="cls-1" x1="305" y1="155" x2="5" y2="155"/><polyline class="cls-1" points="261.07 48.93 208.03 101.97 101.97 208.03 48.93 261.07"/><polyline class="cls-1" points="48.93 48.93 101.97 101.97 208.03 208.03 261.07 261.07"/><polyline class="cls-1" points="155 305 101.97 208.03 5 155"/><polyline class="cls-1" points="305 155 208.03 208.03 155 305"/><polyline class="cls-1" points="155 5 208.03 101.97 305 155"/><polyline class="cls-1" points="5 155 101.97 101.97 155 5"/><line class="cls-2" x1="155" y1="305" x2="155" y2="5"/><line class="cls-2" x1="155" y1="305" x2="155" y2="5"/><line class="cls-2" x1="305" y1="155" x2="5" y2="155"/><line class="cls-2" x1="305" y1="155" x2="5" y2="155"/><polyline class="cls-2" points="261.07 48.93 208.03 101.97 101.97 208.03 48.93 261.07"/><polyline class="cls-2" points="261.07 48.93 208.03 101.97 101.97 208.03 48.93 261.07"/><polyline class="cls-2" points="48.93 48.93 101.97 101.97 208.03 208.03 261.07 261.07"/><polyline class="cls-2" points="48.93 48.93 101.97 101.97 208.03 208.03 261.07 261.07"/><polyline class="cls-2" points="155 305 101.97 208.03 5 155"/><polyline class="cls-2" points="305 155 208.03 208.03 155 305"/><polyline class="cls-2" points="155 5 208.03 101.97 305 155"/><polyline class="cls-2" points="5 155 101.97 101.97 155 5"/></g><g id="S"><polyline class="cls-3" points="155 5 101.97 101.97 208.03 208.03 155 305"/></g><circle id="Круг" class="cls-3" cx="155" cy="155" r="150"/></g></g></svg>
+		</div>
+	</header>
+
+	<div id="main">
+		<div id="cash">
+			<span class="item-name">Вы намайнили:</span>
+			<ul class="hash justify-content-center">
+				<!-- <li class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i></li> -->
+				<li id="info-hashes" class="amount">---</li>
+				<li class="currency">Hashes</li>
+			</ul>
+			<ul class="rub justify-content-center">
+				<!-- <li class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i></li> -->
+				<li id="info-rub" class="amount">---</li>
+				<li class="currency"><i class="fa fa-rub" aria-hidden="true"></i></li>
+			</ul>
+			<div class="buttons">
+				<button id="el-withdraw">Вывод средств</button>
+				<button id="el-stop">приостановить майнинг</button>
+			</div>
+		</div>
+		<!-- <div id="threads">
+			<span class="item-name">Скорость заработка:</span>
+			<div class="container">
+				<div class="row">
+					<span class="col">
+						<i id="el-threads-minus" class="fa fa-minus" aria-hidden="true"></i>
+					</span>
+					<span id="el-threads-info" class="col">1</span>
+					<span class="col">
+						<i id="el-threads-plus" class="fa fa-plus" aria-hidden="true"></i>
+					</span>
+				</div>
+			</div>
+		</div> -->
+	</div>
+
+	<footer class="flex-nowrap">
+		<span class="links" data-url="https://monetaspace.github.io/extension/redirections/1.html">Moneta</span>
+		<span class="links" data-url="https://monetaspace.github.io/extension/redirections/2.html">Как это работает?</span>
+		<span class="links" data-url="https://monetaspace.github.io/extension/redirections/3.html">Группа</span>
+	</footer>
+
+	<script src="js/vars.js"></script>
+	<script src="js/popup/running.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/popup/event-listeners.js"></script>
+	<script src="js/popup/xhr.js"></script>
+	<script src="js/popup/main.js"></script>
+</body>
+</html>

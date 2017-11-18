@@ -1,0 +1,15 @@
+header {
+	height: $moneta-header-height;
+	overflow: hidden;
+
+	.logotype {
+		text-align: center;
+		padding: $moneta-header-height/4 0;
+
+		svg {
+			width: $moneta-header-height/2;
+			height: $moneta-header-height/2;
+			background-color: #fff;
+		}
+	}
+}
