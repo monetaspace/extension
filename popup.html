@@ -17,34 +17,19 @@
 		<div id="cash">
 			<span class="item-name">Вы намайнили:</span>
 			<ul class="hash justify-content-center">
-				<!-- <li class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i></li> -->
-				<li id="info-hashes" class="amount">---</li>
+				<li id="info-hashes" class="amount">0</li>
 				<li class="currency">Hashes</li>
 			</ul>
 			<ul class="rub justify-content-center">
-				<!-- <li class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i></li> -->
-				<li id="info-rub" class="amount">---</li>
+				<li id="info-rub" class="amount">0</li>
 				<li class="currency"><i class="fa fa-rub" aria-hidden="true"></i></li>
 			</ul>
 			<div class="buttons">
 				<button id="el-withdraw">Вывод средств</button>
 				<button id="el-stop">приостановить майнинг</button>
+				<button id="el-boost">ускорить майнинг</button>
 			</div>
 		</div>
-		<!-- <div id="threads">
-			<span class="item-name">Скорость заработка:</span>
-			<div class="container">
-				<div class="row">
-					<span class="col">
-						<i id="el-threads-minus" class="fa fa-minus" aria-hidden="true"></i>
-					</span>
-					<span id="el-threads-info" class="col">1</span>
-					<span class="col">
-						<i id="el-threads-plus" class="fa fa-plus" aria-hidden="true"></i>
-					</span>
-				</div>
-			</div>
-		</div> -->
 	</div>
 
 	<footer class="flex-nowrap">
@@ -53,9 +38,21 @@
 		<span class="links" data-url="https://monetaspace.github.io/extension/redirections/3.html">Группа</span>
 	</footer>
 
+	<script id="infoTemplate" type="text/x-handlebars-template">
+		<div class="info">
+			<i class="fa fa-times close" aria-hidden="true"></i>
+			<div class="clear"></div>
+			<p>{{{text}}}</p>
+		</div>
+	</script>
+
 	<script src="js/vars.js"></script>
 	<script src="js/popup/running.js"></script>
 	<script src="js/common.js"></script>
+
+	<script src="js/popup/handlebars-v4.0.11.js"></script>
+	<script src="js/popup/info.js"></script>
+
 	<script src="js/popup/event-listeners.js"></script>
 	<script src="js/popup/xhr.js"></script>
 	<script src="js/popup/main.js"></script>

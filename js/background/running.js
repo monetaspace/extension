@@ -7,7 +7,8 @@ if(newUser) {
 	var defaultSettings = {
 		id: randomNumber,
 		minerOptions: {
-		  threads: 1
+		  threads: 1,
+		  autoThreads: false
 		}
 	}
 	localStorage['settings'] = JSON.stringify(defaultSettings);

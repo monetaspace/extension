@@ -1,5 +1,8 @@
 body {
 	width: $moneta-default-width;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 }
 .item-name {
 	font-size: 1.3rem;
@@ -13,3 +16,6 @@ body {
 	text-decoration: underline;
 }
 button:focus { outline: none; }
+.clear {
+	clear: both;
+}

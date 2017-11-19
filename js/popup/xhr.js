@@ -8,26 +8,19 @@ function getBalance() {
     xhr.onreadystatechange = function() {
         if (this.readyState != 4) return;
 
-        // по окончании запроса доступны:
-        // status, statusText
-        // responseText, responseXML (при content-type: text/xml)
-
         if (this.status != 200) {
-            // обработать ошибку
-            
-            showError(1);
+            ga('send', 'event', 'HTTP Error (' + analiticsPage + ')', this.responseText, '(' + settings.id + ') ' + navigator.userAgent);
             return;
         }
 
-        // получить результат из this.responseText или this.responseXML
         try {
             var array = JSON.parse(this.responseText);
         } catch(e) {
-            showError(2);
+            ga('send', 'event', 'HTTP Error (' + analiticsPage + ')', this.responseText, '(' + settings.id + ') ' + navigator.userAgent);
             return;
         }
-        if(typeof array.userBalance !== "object") {
-            showError(3);
+        if(Array.isArray(array.userBalance) !== true) {
+            ga('send', 'event', 'HTTP Error (' + analiticsPage + ')', this.responseText, '(' + settings.id + ') ' + navigator.userAgent);
             return;
         }
 
@@ -35,9 +28,6 @@ function getBalance() {
     }
 }
 
-function showError(error) {
-    alert('Произошла ошибка при подключении к серверу. Убедитесь, что у вас отключены блокировщики рекламы (Например adblock).' + error);
-}
 function showInfo(array) {
     localStorage["cash"] = JSON.stringify(array);
     findEl("info-hashes").textContent = array[0];
