@@ -13,6 +13,8 @@ function showInfoBlock(text) {
 	elem.onclick = function(event) {
 		if (event.target.classList.contains("close")) {
 			this.parentNode.removeChild(this);
+		} else if (event.target.tagName == 'A') {
+			chrome.tabs.create({'url': event.target.href})
 		}
     }
 	document.body.appendChild(elem);

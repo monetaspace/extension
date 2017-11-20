@@ -1,3 +1,8 @@
+if(bg.miner === undefined) {
+	showInfoBlock("infoStartMinerError");
+	ga('send', 'event', 'startMiner Error (' + analyticsPage + ')', 'Miner is not started', '(' + settings.id + ') ' + navigator.userAgent);
+	sendJSError('startMiner Error', '', '');
+}
 //// EVENT LISTENERS
 
 // Withdraw
@@ -12,7 +17,6 @@ findEl("el-stop").addEventListener('click', stop);
 // Links
 [].forEach.call(document.getElementsByClassName('links'), function(item) {
 	item.addEventListener('click', function() {
-		// chrome.windows.create({'url': item.dataset.url, 'type': 'popup'});
 		chrome.tabs.create({'url': item.dataset.url});
 	});
 });

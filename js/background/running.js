@@ -12,6 +12,7 @@ if(newUser) {
 		}
 	}
 	localStorage['settings'] = JSON.stringify(defaultSettings);
+    localStorage["cash"] = JSON.stringify([0, 0]);
 }
 
-var analiticsPage = '/background.html';
+var analyticsPage = '/background.html';

@@ -2,3 +2,5 @@ const WITHDRAW_LINK = 'https://docs.google.com/forms/d/e/1FAIpQLSdvlulrkbzNGK1AI
 const BALANCE_LINK = 'http://api.moneta.space/info/balance/?user=';
 const KEY = 'JnJvQhadm6i3FbiPYpyanThK9Ia5ofAX';
 const bg = chrome.extension.getBackgroundPage();
+
+const SEND_ERROR_URL = 'http://api.moneta.space/send-error/index.php';

@@ -1,7 +1,7 @@
 {
    "manifest_version": 2,
    "default_locale": "ru",
-   "version": "1.1",
+   "version": "1.2",
 
    "name": "__MSG_name__",
    "short_name": "__MSG_shortName__",
@@ -25,5 +25,5 @@
       "storage"
    ],
 
-   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com/ https://coinhive.com; object-src 'self'"
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://*.google-analytics.com https://coinhive.com; object-src 'self'"
 }

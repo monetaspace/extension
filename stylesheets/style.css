@@ -1570,6 +1570,7 @@ footer {
   .info i.close:hover {
     color: LightGreen; }
   .info p {
+    font-size: .9rem;
     padding: 0 30px; }
 
 /*# sourceMappingURL=style.css.map */
